@@ -1,0 +1,151 @@
+body{
+  font-family: Arial, Helvetica, sans-serif;
+  color: black;
+}
+
+header{
+  padding: 30px;
+  text-align: center;
+}
+
+.menu-bar a{
+  padding: 14px 20px;
+  margin-right: 20px;
+  border: 2px solid #003f93;
+  border-radius: 25px;
+  color: black;
+  text-decoration: none;
+}
+
+.menu-bar a:last-child {
+  margin-right: 0;
+}
+
+.menu-bar a:hover {
+  background-color: #003f93;
+  color: white;
+}
+
+main{
+display: flex;
+justify-content: center;
+align-items: center;
+height: 100vh;
+margin: 0;
+}
+
+img{
+border: 2px solid #003f93;
+border-radius: 20px;
+}
+
+.carousel {
+position: relative;
+width: 400px;
+overflow: hidden;
+}
+
+.carousel-container {
+display: flex;
+justify-content: center;
+align-items: center;
+width: 100%;
+overflow: hidden;
+}
+
+.carousel-images {
+display: flex;
+transition: transform 0.5s ease-in-out;
+width: 100%;
+}
+
+.carousel-images img {
+width: 100%;
+cursor: pointer;
+justify-content: center;
+}
+
+button {
+position: absolute;
+top: 50%;
+transform: translateY(-50%);
+background-color: rgba(93, 90, 90, 0.1);
+color: white;
+border: none;
+padding: 10px;
+cursor: pointer;
+font-size: 20px;
+border: 2px solid #003f93;
+border-radius: 20px;
+}
+
+button:hover {
+background-color: rgba(93, 90, 90, 0.1);
+color:#003f93;
+border: 2px solid white;
+}
+
+.prev {
+left: 10px;
+}
+
+.next {
+right: 10px;
+}
+
+.amstel-campus {
+padding: 20px;
+}
+
+.amstel-campus h2{
+font-size: 24px;
+text-align: center;
+border: 2px solid #003f93;
+border-radius: 20px;
+margin: 20px;
+padding: 5px;
+background-color: #003f93;
+color: white;
+}
+
+.amstel-campus .content {
+display: grid;
+grid-template-columns: 1fr 1fr; /* Twee kolommen van gelijke breedte */
+gap: 20px; /* Ruimte tussen kolommen */
+align-items: stretch; /* Zorgt ervoor dat beide items dezelfde hoogte krijgen */
+}
+
+.amstel-campus img {
+max-width: 100%;
+height: auto; /* Behoudt de verhoudingen van de afbeelding */
+border: 2px solid #003f93;
+border-radius: 20px;
+}
+
+.amstel-campus .text-block {
+padding-left: 20px;
+border: 2px solid #003f93;
+border-radius: 20px;
+display: flex;
+flex-direction: column;
+justify-content: center;
+background-color: #003f93;
+align-items: center;
+}
+
+.amstel-campus .text-block p{
+font-size: 16px;
+line-height: 1.6;
+color: white;
+}
+
+.amstel-campus img,
+.amstel-campus .text-block {
+  max-width: 100%;
+}
+
+@media (max-width: 765px) {
+.amstel-campus .content {
+    grid-template-columns: 1fr; /* Zet de grid om in één kolom */
+}
+}
