@@ -1,0 +1,213 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Be Vietnam Pro;
+
+    min-height: auto;
+    width: 100vw;
+
+    margin: 0;
+    background-color: #F4F4F9;
+}
+
+.header {
+    position: fixed;
+    top: -0.25em;
+    left: 0;
+    width: 100vw;
+
+    text-align: center;
+    font-weight: bold;
+    font-size: 13.5vw;
+
+    z-index: 1;
+    color: #d5d2cb;
+    mix-blend-mode: difference;
+}
+
+section {
+    opacity: 0%;
+    transition: 0.2;
+}
+
+/* images */
+.img-container {
+    position: absolute;
+}
+
+.img-container > section {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+
+    width: 100%;
+    text-align: center;
+
+    color: white;
+    text-shadow: 0 0 5px black;
+}
+
+.img-container > img {
+    width: 100%;
+    transition: 0.2s;
+}
+
+/* image positions */
+#img-1 {
+    top: 16vw;
+    left: 2vw;
+    width: 26vw;
+}
+#img-2 {
+    top: 30vw;
+    left: 33vw;
+    width: 30vw;
+}
+#img-3 {
+    top: 22vw;
+    right: 2vw;
+    width: 30vw;
+}
+#img-4 {
+    top: 75vw;
+    left: 2vw;
+    width: 30vw;
+}
+#img-5 {
+    top: 85vw;
+    left: 36vw;
+    width: 28vw;
+}
+#img-6 {
+    top: 80vw;
+    left: 68vw;
+    width: 29.5vw;
+}
+
+/* image hover */
+.img-container {
+    transition: all 0.1s ease-in-out;
+}
+
+.img-container:hover {
+    transform: scale(1.05);
+}
+
+.img-container:hover img{
+    filter: brightness(20%);
+    transition: 0.3s;
+}
+
+.img-container:hover section{
+    opacity: 100%;
+}
+
+/* Responsive */
+@media screen and (max-width: 1050px) {
+    #img-1 {
+        top: 20vw;
+        left: 5vw;
+        width: 35vw;
+    }
+    #img-2 {
+        top: 24vw;
+        left: 55vw;
+        width: 40vw;
+    }
+    #img-3 {
+        top: 75vw;
+        left: 5vw;
+        width: 40vw;
+    }
+    #img-4 {
+        top: 80vw;
+        left: 57vw;
+        width: 35vw;
+    }
+    #img-5 {
+        top: 132vw;
+        left: 7vw;
+        width: 40vw;
+    }
+    #img-6 {
+        top: 134vw;
+        left: 55vw;
+        width: 40vw;
+    }
+}
+
+@media screen and (max-width: 750px) {
+    #img-1 {
+        top: 20vw;
+        left: 13vw;
+        width: 75vw;
+    }
+    #img-2 {
+        top: 130vw;
+        left: 16vw;
+        width: 70vw;
+    }
+    #img-3 {
+        top: 235vw;
+        left: 10vw;
+        width: 80vw;
+    }
+    #img-4 {
+        top: 350vw;
+        left: 12vw;
+        width: 75vw;
+    }
+    #img-5 {
+        top: 460vw;
+        left: 10vw;
+        width: 80vw;
+    }
+    #img-6 {
+        top: 575vw;
+        left: 12vw;
+        width: 75vw;
+    }
+}
+
+@media (pointer: coarse) {
+    .cursor {
+        display: none;
+    }
+}
+
+
+/* cursor */
+.cursor {
+    position: fixed;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    pointer-events: none;
+    mix-blend-mode: difference;
+    background: rgb(255, 255, 255);
+    transition: transform 0.2s ease-out;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+    
+}
+
+
+.header:hover ~ .cursor,
+.img-container:hover ~ .cursor
+{
+    transform: scale(6);
+}
+
+/* scrollbar */
+::-webkit-scrollbar { 
+    display: none;
+}
